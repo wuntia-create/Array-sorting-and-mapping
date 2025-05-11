@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sort</title>
+        <body>
+            <h1>Arrange the numbers</h1>
+            <p id="result"></p>
+            <button onclick="Ascending()">Ascending order</button>
+            <button onclick="Descending()">Descending order</button>
+            <p id="sorted_result"></p>
+            <script>
+                //creating an array
+                var points=[23,45,6,79,0,56,45,89,0,23,1];
+                document.getElementById("result").innerHTML=points;
+                function Ascending(){
+                    points.sort(function(a,b){return a-b});
+                    document.getElementById("sorted_result").innerHTML=points
+                }
+                 function Descending(){
+                    points.sort(function(a,b){return b-a});
+                    document.getElementById("sorted_result").innerHTML=points
+                }
+            </script>
+        </body>
+    </head>
+</html>
